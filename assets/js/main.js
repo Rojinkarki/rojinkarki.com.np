@@ -253,3 +253,15 @@
       alert("Something went wrong. Please try again.");
     }
   });
+
+
+
+
+
+
+
+
+  menuButton.addEventListener('click', () => {
+  document.body.classList.toggle('nav-open');
+  navPanel.classList.toggle('open');
+});

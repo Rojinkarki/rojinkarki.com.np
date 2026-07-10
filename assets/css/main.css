@@ -2137,3 +2137,17 @@ section,
 
 
 
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* or 100dvh for mobile browser chrome */
+  background: #0a0a0a; /* solid, not transparent */
+  z-index: 999;
+  overflow-y: auto;
+}
+
+body.nav-open {
+  overflow: hidden; /* prevent background scroll/content bleed */
+}
