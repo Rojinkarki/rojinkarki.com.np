@@ -84,7 +84,7 @@ html[data-theme] .hero::after {
 }
 .hero .row { align-items:center; }
 html[data-theme] .hero-text { border:0; padding:28px 0; position:relative; }
-html[data-theme] .hero-text::before { content:'HELLO, I AM'!important; display:block!important; color:var(--alert); font:700 12px var(--mono); letter-spacing:.16em; margin-bottom:21px; }
+html[data-theme] .hero-text::before { content:'HELLO, I AM'!important; display:block!important; width:max-content; padding:0!important; border:0!important; background:none!important; color:var(--alert); font:700 12px var(--mono); letter-spacing:.16em; margin-bottom:21px; }
 html[data-theme] .hero-text h1 {
   max-width:700px; background:none; background-clip:initial; color:var(--text); -webkit-text-fill-color:var(--text);
   font:700 clamp(78px,9.2vw,158px)/.83 var(--heading); letter-spacing:-.077em; margin:0 0 35px;
