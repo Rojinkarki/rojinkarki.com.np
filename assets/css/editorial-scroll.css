@@ -219,6 +219,10 @@ html[data-theme] .project-visual,html[data-theme] .featured-project .project-vis
   padding:70px 26px 66px; background:linear-gradient(145deg,var(--poster-a),var(--poster-b));
   border:0; overflow:hidden;
 }
+html[data-theme="dark"] .project-card .project-visual,
+html[data-theme="dark"] .featured-project .project-visual {
+  background:linear-gradient(145deg,var(--poster-a),var(--poster-b));
+}
 html[data-theme] .project-visual::before {
   content:''; position:absolute; display:block; inset:-16% -28% auto auto;
   width:72%; aspect-ratio:1; border:2px solid var(--poster-ink); border-radius:50%; opacity:.18;
@@ -245,6 +249,9 @@ html[data-theme] .project-visual span {
   position:absolute; top:20px; left:20px; z-index:2; max-width:calc(100% - 40px);
   background:var(--surface); color:var(--text); border:1px solid var(--poster-ink);
   box-shadow:3px 3px 0 var(--poster-ink); font:700 10px/1.3 var(--mono); letter-spacing:.04em;
+}
+html[data-theme="dark"] .project-card .project-visual span {
+  background:#fffaf1; color:#192127; text-shadow:none;
 }
 html[data-theme] .project-visual strong { display:none; }
 html[data-theme] .project-visual .visual-footer {
