@@ -3,7 +3,7 @@
   const key = 'rojin-portfolio-theme';
   let saved = null;
   try { saved = localStorage.getItem(key); } catch (_) { /* Storage may be disabled. */ }
-  document.documentElement.dataset.theme = saved === 'light' ? 'light' : 'dark';
+  document.documentElement.dataset.theme = saved === 'dark' ? 'dark' : 'light';
 
   const init = () => {
     const button = document.getElementById('theme-toggle');
@@ -17,7 +17,7 @@
       if (icon) icon.textContent = light ? '◐' : '☀';
       if (label) label.textContent = light ? 'Dark mode' : 'Light mode';
       const color = document.querySelector('meta[name="theme-color"]');
-      if (color) color.content = light ? '#f7f8f6' : '#0b1420';
+      if (color) color.content = light ? '#f5f0e7' : '#11191d';
     };
     button.addEventListener('click', () => {
       const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
