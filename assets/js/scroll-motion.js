@@ -14,7 +14,7 @@
 
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
   const targets = document.querySelectorAll(
-    '.index-page .section-title, .index-page .about .profile-card, .index-page .about-content, .index-page .project-card, .index-page .skills-category, .index-page .experience-card, .index-page .education-card, .index-page .cert-card, .index-page .contact .info-box, .index-page .contact-form'
+    '.index-page .section-title, .index-page .about .profile-card, .index-page .about-content, .index-page .project-card, .index-page .skills-category, .index-page .experience-card, .index-page .education-card, .index-page .cert-card, .index-page .contact .info-box, .index-page .contact-form, .details-page .page-title, .details-page .case-study'
   );
   const observer = new IntersectionObserver(entries => {
     for (const entry of entries) {
@@ -27,5 +27,10 @@
     element.classList.add('motion-reveal');
     observer.observe(element);
   });
+  const sections = document.querySelectorAll('.index-page main > section');
+  const sectionObserver = new IntersectionObserver(entries => {
+    for (const entry of entries) entry.target.classList.toggle('section-in-view', entry.isIntersecting);
+  }, { rootMargin: '-15% 0px -30% 0px' });
+  sections.forEach(section => sectionObserver.observe(section));
   document.documentElement.classList.add('motion-ready');
 })();
