@@ -84,7 +84,7 @@ html[data-theme] .hero::after {
 }
 .hero .row { align-items:center; }
 html[data-theme] .hero-text { border:0; padding:28px 0; position:relative; }
-html[data-theme] .hero-text::before { content:'HELLO, I AM'; display:block!important; color:var(--alert); font:700 12px var(--mono); letter-spacing:.16em; margin-bottom:21px; }
+html[data-theme] .hero-text::before { content:'HELLO, I AM'!important; display:block!important; color:var(--alert); font:700 12px var(--mono); letter-spacing:.16em; margin-bottom:21px; }
 html[data-theme] .hero-text h1 {
   max-width:700px; background:none; background-clip:initial; color:var(--text); -webkit-text-fill-color:var(--text);
   font:700 clamp(78px,9.2vw,158px)/.83 var(--heading); letter-spacing:-.077em; margin:0 0 35px;
@@ -148,6 +148,7 @@ html[data-theme] .project-proof { border-left:3px solid var(--alert); color:var(
 html[data-theme] .project-proof b { color:var(--text); }
 html[data-theme] .project-tech span { background:var(--base-2); border-color:var(--line); color:var(--text); }
 html[data-theme] .project-status.is-building, html[data-theme] .project-status.is-complete { color:var(--text); border-color:var(--text); background:transparent; }
+html[data-theme] .project-status { align-self:flex-start; }
 html[data-theme] .project-status.is-building::before { content:'● '; color:var(--alert); }
 html[data-theme] .btn-project, html[data-theme] .secondary-link { border-color:var(--text); color:var(--text); border-radius:30px; }
 html[data-theme] .btn-project:hover { background:var(--text); color:var(--surface); }
